@@ -195,7 +195,7 @@ const CampaignEditForm = ({
             disabled={loading || disabled}
           />
         }
-        disabled={disableOnPrivate && !initialCampaignCreate.isPublic}
+        disabled={disableOnPrivate && !campaign.isPublic}
         sx={{ my: 2 }}
         label={
           <Typography variant="body1" color="textSecondary">
