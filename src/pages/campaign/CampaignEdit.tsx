@@ -137,7 +137,7 @@ const CampaignEditForm = ({
           renderInput={(params) => <TextField {...params} label={t('campaign.wikiProject')} variant="outlined" />}
           sx={{ width: { xs: '100%', sm: '40%' }, mb: 1 }}
           value={campaign.language}
-          onChange={(e, value) => onUpdate({ language: value as string })}
+          onChange={(e, value) => onUpdate({ language: value || 'commons' })}
           disabled={loading || disabled}
         />
         <DatePicker
