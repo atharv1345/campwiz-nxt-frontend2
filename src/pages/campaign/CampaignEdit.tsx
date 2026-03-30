@@ -27,18 +27,6 @@ export interface CampaignCreate {
   isPublic: boolean;
 }
 
-// ================== INITIAL STATE ==================
-const initialCampaignCreate: CampaignCreate = {
-  name: "",
-  language: "commons",
-  startDate: new Date().toISOString(),
-  endDate: new Date().toISOString(),
-  coordinators: [],
-  description: "",
-  rules: "",
-  isPublic: true
-};
-
 // ================== USER INPUT COMPONENT ==================
 const UserInput = ({
   value,
@@ -159,7 +147,7 @@ const CampaignEditForm = ({
           )}
           sx={{ width: { xs: "100%", sm: "40%" }, mb: 1 }}
           value={campaign.language}
-          onChange={(e, value) =>
+          onChange={(_, value) =>
             onUpdate({ language: value || "commons" })
           }
           disabled={loading || disabled}
